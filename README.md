@@ -1,2 +1,2 @@
 # vue-leaflet-cordova
-A Cordova app with vie-leaflet
+A Cordova app with vue-leaflet
