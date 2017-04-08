@@ -1,13 +1,20 @@
 <template>
-    <f7-toolbar tabbar>
-        <f7-link tab-link="#tab1">Tab 1</f7-link>
-        <f7-link tab-link="#tab2">Tab 2</f7-link>
-    </f7-toolbar>
+    <tabbar>
+      <tabbar-item v-for="item in items" :link="item.link">
+        <img slot="icon" :src="item.logo">
+        <span slot="label">{{item.name}}</span>
+      </tabbar-item>
+    </tabbar>
 </template>
 
 <script>
+import { Tabbar, TabbarItem } from 'vux'
 
 export default {
+  components: {
+    Tabbar,
+    TabbarItem
+  },
   computed:{
     items:function(){
       return [{
@@ -25,10 +32,5 @@ export default {
       }];
     }
   },
-  methods:{
-    itemclick(){
-      console.log(1)
-    }
-  }
 }
 </script>
