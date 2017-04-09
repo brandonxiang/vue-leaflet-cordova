@@ -34,7 +34,7 @@ export default {
       map: state => state.VL.map,
   }),
   mounted(){
-      (new locateControl()).addTo(this.map)
+    //   (new locateControl()).addTo(this.map)
   }
 }
 
@@ -46,15 +46,12 @@ export default {
 @import "~leaflet.locatecontrol/dist/L.Control.Locate.css";
 @import "//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
 
+html,
+body,
+.full-height,
 #map {
     width: 100%;
     height:100%;
-}
-
-html,
-body,
-.full-height {
-    height: 100%;
 }
 
 body {

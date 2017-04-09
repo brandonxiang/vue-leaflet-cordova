@@ -1,22 +1,17 @@
 <template>
   <div>
-    <grid>
-      <grid-item link="/"  v-for="item in icons" :label="item.title" @on-item-click="changeMarker({coordinates:item.coordinates,cityName:item.title})">
-         <img slot="icon" src="../assets/logo.png">
-      </grid-item>
-    </grid>
+    <f7-list>
+      <f7-list-item link="/"  v-for="item in icons" :title="item.title" :key="item.title">
+      </f7-list-item>
+    </f7-list>
   </div>
 </template>
 
 <script>
-import { Grid, GridItem } from 'vux'
+
 import {mapMutations} from 'vuex'
 
 export default {
-  components: {
-    Grid,
-    GridItem
-  },
   computed:{
     icons:{
       get: function(){
